@@ -41,5 +41,15 @@
     "prettier": "^3.3.2",
     "typescript": "^5.5.2",
     "vite": "^5.3.1"
+  },
+  "build": {
+    "appId": "com.projectbankalt.app",
+    "productName": "ProjectBankAlt",
+    "directories": {
+      "buildResources": "resources"
+    },
+    "win": {
+      "icon": "resources/icon.ico"
+    }
   }
 }

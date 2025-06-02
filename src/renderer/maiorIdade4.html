@@ -3,102 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sistema de Desenvolvedor</title>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./assets/menorIdade4.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <div>
-        <h1>INFORMAÇÕES - SUPORTE</h1>
-        <form>
-            <h2>DADOS PESSOAIS</h2>
+        <a href="login.html"><img src="./assets/Home.png" style="display: block" id="imglogin" /></a>
+        <div id="tudo">
+        <h1 id="h1e">INFORMAÇÕES - SUPORTE</h1>
+        <h2 class="h2e">DADOS PESSOAIS</h2>
+        <form class="form1">
+            <div class="labels">
             <label for="name">Nome Completo</label>
             <input type="text" placeholder="Bruno Henrique">
+            </div>
+            <div class="labels">
             <label for="suportLevel">Nível de Suporte</label>
-            <select name="suportLevel" id="suportLevel">
-                <option value="nivel 1 - leve">Nível 1 - Leve</option>
-                <option value="nivel 2 - moderado">Nível 2 - Moderado</option>
-                <option value="nivel 3 - severo">Nível 3 - Severo</option>
-            </select>
+            <input type="text" placeholder="Nível - 1">
+            </div>
+            <div class="labels">
             <label for="comorbidity">Comorbidade</label>
             <input type="text" placeholder="TDAH">
+            </div>
         </form>
-
-        <form>
-            <h2>APRENDIZEM TEA</h2>
+        <h2 class="h2e">APRENDIZEM TEA</h2>
+        <form class="form1">
+            <div class="labels">
             <label for="categoryInicial">Categoria Iniciada</label>
-            <select name="categoryInicial" id="categoryInicial">
-                <option value="iniciante - I">Iniciante I</option>
-                <option value="iniciante - II">Iniciante II</option>
-                <option value="iniciante - III">Iniciante III</option>
-                <option value="intermediario - I">Intermediário I</option>
-                <option value="intermediario - II">Intermediário II</option>
-                <option value="intermediario - III">Intermediário III</option>
-                <option value="especialista - I">Especialista I</option>
-                <option value="especialista - II">Especialista II</option>
-                <option value="especialista - III">Especialista III</option>
-            </select>
+            <input type="text" placeholder="iniciante - I">
+            </div>
+            <div class="labels">
             <label for="categoryActual">Categoria Iniciada</label>
-            <select name="categoryActual" id="categoryActual">
-                <option value="iniciante - I">Iniciante I</option>
-                <option value="iniciante - II">Iniciante II</option>
-                <option value="iniciante - III">Iniciante III</option>
-                <option value="intermediario - I">Intermediário I</option>
-                <option value="intermediario - II">Intermediário II</option>
-                <option value="intermediario - III">Intermediário III</option>
-                <option value="especialista - I">Especialista I</option>
-                <option value="especialista - II">Especialista II</option>
-                <option value="especialista - III">Especialista III</option>
-            </select>
+            <input type="text" placeholder="iniciante - II">
+            </div>
+            <div class="labels">
             <label for="objetive">Meta</label>
-            <select name="objetive" id="objetive">
-                <option value="iniciante - I">Iniciante I</option>
-                <option value="iniciante - II">Iniciante II</option>
-                <option value="iniciante - III">Iniciante III</option>
-                <option value="intermediario - I">Intermediário I</option>
-                <option value="intermediario - II">Intermediário II</option>
-                <option value="intermediario - III">Intermediário III</option>
-                <option value="especialista - I">Especialista I</option>
-                <option value="especialista - II">Especialista II</option>
-                <option value="especialista - III">Especialista III</option>
-            </select>
-        </form>
-
-        <form>
-            <h2>PERSONALIZAÇÕES</h2>
+            <input type="text" placeholder="especialista - II">
+            </div>
+        </form >
+        <h2 class="h2e">PERSONALIZAÇÕES</h2>
+        <form class="form1">
+            <div class="labels">
             <label for="favoriteColor">Cor favorita</label>
             <input type="text" placeholder="Azul">
+            </div>
+            <div class="labels">
             <label for="categoryInicial">Categoria Iniciada</label>
-            <select name="categoryInicial" id="categoryInicial">
-                <option value="iniciante - I">Iniciante I</option>
-                <option value="iniciante - II">Iniciante II</option>
-                <option value="iniciante - III">Iniciante III</option>
-                <option value="intermediario - I">Intermediário I</option>
-                <option value="intermediario - II">Intermediário II</option>
-                <option value="intermediario - III">Intermediário III</option>
-                <option value="especialista - I">Especialista I</option>
-                <option value="especialista - II">Especialista II</option>
-                <option value="especialista - III">Especialista III</option>
-            </select>
+            <input type="text" placeholder="iniciante - I">
+            </div>
+            <div class="labels">
             <label for="objetive">Meta</label>
-            <select name="objetive" id="objetive">
-                <option value="iniciante - I">Iniciante I</option>
-                <option value="iniciante - II">Iniciante II</option>
-                <option value="iniciante - III">Iniciante III</option>
-                <option value="intermediario - I">Intermediário I</option>
-                <option value="intermediario - II">Intermediário II</option>
-                <option value="intermediario - III">Intermediário III</option>
-                <option value="especialista - I">Especialista I</option>
-                <option value="especialista - II">Especialista II</option>
-                <option value="especialista - III">Especialista III</option>
-            </select>
+            <input type="text" placeholder="intermediario - III">
+            </div>
         </form>
         
         <div>
-            <a href="maiorIdade5.html">CONTINUAR</a>
-            <a href="maiorIdade3.html">VOLTAR</a>
+            <a href="maiorIdade3.html" id="voltar">VOLTAR</a>
         </div>
     </div>
   </body>
