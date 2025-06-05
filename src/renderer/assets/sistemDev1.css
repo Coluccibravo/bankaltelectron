@@ -3,10 +3,38 @@
 body{
     background-color: var(--gwhite);
     font-family: "Poppins";
+
+    min-height: 70vh;
 }
 
-#p1sisdev{
+p{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+#h1t{
+    color: var(--bluelock);
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+#p1{
     font-weight: 800;
+}
+
+#divinputs{
+    display: flex;
+    gap: 20px;
+}
+
+.as{
+    margin-top: 15px;
+    background-color: var(--purple);
+    color: var(--gwhite);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
 }
 
 #imglogin{
@@ -23,37 +51,19 @@ body{
     height: 200px;
 }
 
-#h1sisdev{
-    color: var(--bluelock);
-    font-weight: 800;
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#btninfo{
-    text-decoration: none;
-    border: solid var(--purple);
-    background-color: var(--purple);
-    border-radius: 5px;
-    font-size: 13px;
-    padding: 5px;
-    color: white;
-    font-weight: 600;
-    font-family: "Poppins";
-}
-
-#btninfo:hover{
-    background-color: var(--bluelight);
-    border-color: var(--bluelight);
-}
-
-.conteiner {
+#container{
     display: flex;
-    min-height: 80vh;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 30px;
+    min-height: 80vh;
+}
+
+.ButtonCancel {
+    background-color: var();
+    display: flex;
+    justify-content: right;
+    margin-top: 3%;
 }
 
 
@@ -68,11 +78,4 @@ body{
 
 .Buttoncancel:hover{
     background-color: darkred;
-}
-
-.ButtonCancel {
-    background-color: var();
-    display: flex;
-    justify-content: right;
-    margin-top: 3%;
 }

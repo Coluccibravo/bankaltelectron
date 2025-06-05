@@ -1,23 +1,113 @@
+@import './base.css';
+
 body{
- 
+    font-family: "Poppins";
+    background-color: var(--gwhite);
+}
+
+#imglogin{
+    height: 40px;
+    width: 40px;
+}
+
+#imglogin:hover{
+    cursor: pointer;
+}
+
+#h1t{
+    color: var(--bluelock);
+}
+
+.h2t{
+    color: var(--purple);
+}
+
+label{
+    font-weight: 700;
+    margin-bottom: 4px;
+    margin-top: 20px;
+}
+input{
+    padding: 3px;
+    font-family: "Poppins";
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+#btnsave{
+    background-color: var(--purple);
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
 }
 
 .DivGlobalPageRegister{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+#container{
+    display: flex;
+    gap: 170px;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    margin-bottom: 50px;
 }
 
 .FormPageRegister1{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
 .FormPageRegister2{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+}
+
+.DivButtonsRegister{
+    display: flex;
+    gap: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ButtonCancel {
+    display: flex;
+    justify-content: right;
+    margin-top: 3%;
+    background-color: #FA0202;
+    border-color: #FA0202;
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.ButtonCancel:hover{
+    background-color: darkred;
+    cursor: pointer;
 }
