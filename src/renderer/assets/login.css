@@ -31,6 +31,14 @@ body{
 
 .Pconectlogin{
     font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Pconectlogin1{
+    font-weight: 400;
+    text-align: center;
+    font-size: 13px;
 }
 
 #FormPageLogin{
@@ -100,4 +108,9 @@ input:focus{
 
 .welcome{    
     color: var(--bluelock);
+    margin-bottom: 0px;
+}
+
+.welcome1{    
+    margin-bottom: 0px;
 }
