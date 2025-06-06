@@ -24,7 +24,10 @@
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
     "axios": "^1.9.0",
-    "electron-updater": "^6.1.7"
+    "datatables.net-dt": "^2.3.1",
+    "electron-updater": "^6.1.7",
+    "gridjs": "^6.2.0",
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
