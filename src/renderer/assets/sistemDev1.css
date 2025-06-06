@@ -3,6 +3,7 @@
 body{
     background-color: var(--gwhite);
     font-family: "Poppins";
+
     min-height: 70vh;
 }
 
@@ -64,6 +65,7 @@ p{
     justify-content: right;
     margin-top: 3%;
 }
+
 
 .Buttoncancel{
     background-color: #FA0202;
