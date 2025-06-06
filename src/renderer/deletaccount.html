@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/delete.css">
+    <title>Delete</title>
+</head>
+
+<body>
+    <div id="principal">
+        <h1 class="titulo-delete">Deseja realmente deletar a conta?</h1>
+        <p class="descricao-delete">
+            Se você deletar a conta perderá permanentemente o acesso a ela e a mesma será excluida!
+        </p>
+        <div id="form">
+            <p>
+                Username
+            </p>
+            <input type="text" placeholder="leomendes" id="inputusername">
+            <p>
+                Senha
+            </p>
+            <input type="password" placeholder="***" id="inputsenha">
+            
+            <div class="box-botoes">
+                <input type="button" value="CONFIRMAR EXCLUSÃO" class="botao-form ButtonConfirma" id="confirma" />
+                <input type="button" value="VOLTAR" class="botao-form ButtonCancel" id="cancel" />
+            </div>
+        </div>
+
+        
+    </div>
+
+    <p id="pdelet"></p>
+    <script src="deletaccount.js"></script>
+</body>
+
+</html>

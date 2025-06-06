@@ -53,11 +53,16 @@ body {
   text-decoration: none;
   font-weight: 700;
   font-family: "Poppins";
+  border: 1px solid var(--gwhite);
+  color: var(--purple);
+  transition: 0.3s ease-in;
 }
 
 #aPageIntroduction:hover{
-  background-color: lightgrey;
-  color: black;
+  background-color: var(--purple);
+  color: var(--gwhite);
+  border: 1px solid var(--gwhite);
+  transition: 0.3s ease-out;
 }
 
 #LastPPageIntroduction{

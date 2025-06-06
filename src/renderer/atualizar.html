@@ -2,47 +2,56 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastro</title>
+    <title>Atualizar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./assets/cadastro.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
+    <img src="./assets/Home.png" style="display: block" id="imglogin" />
     <div class="DivGlobalPageRegister">
-      <h1 id="h1t">Atualização de Dados</h1>
+      <h1 id="h1t">Atualize suas Informações!</h1>
       <div id="container">
       <form class="FormPageRegister1">
         <h2 class="h2t">SUAS INFORMAÇÕES</h2>
         <label for="name">Nome completo</label>
-        <input type="text" placeholder="Leonardo Pedroso Mendes" />
+        <input type="text" placeholder="Leonardo Pedroso Mendes" id="inputnome" />
         <label for="position">Cargo</label>
-        <input type="text" placeholder="Programador BackEnd" />
-        <label for="verification">Verificação</label>
-        <input type="text" placeholder="****" />
+        <input type="text" placeholder="Programador BackEnd" id="inputcargo" />
+        <label for="verification">Data de Nascimento</label>
+        <input type="date" placeholder="00/00/0000" id="inputdatanascimento"/>
         <label for="cpf">CPF</label>
-        <input type="number" placeholder="11.111.111-1"/>
+        <input type="text" placeholder="11.111.111-1" id="inputcpf"/>
+        <p id="pcpf"></p>
       </form>
+
 
       <form class="FormPageRegister2">
         <h2 class="h2t">DADOS DA CONTA</h2>
         <label for="Username">Username</label>
-        <input type="text" placeholder="leomendes" />
+        <input type="text" placeholder="leomendes" id="inputusername" />
+        <p id="pusername"></p>
         <label for="email">Email</label>
-        <input type="email" placeholder="leomendes@gmail.com" />
+        <input type="email" placeholder="leomendes@gmail.com" id="inputemail"/>
+        <p id="pemail"></p>
         <label for="password">Senha</label>
-        <input type="password" placeholder="*****" />
+        <input type="password" placeholder="*****" id="senha1"/>
         <label for="ConfirmPassword">Confirmar Senha</label>
-        <input type="password" placeholder="*****" />
+        <input type="password" placeholder="*****" id="senha2"/>
       </form>
     </div>
 
+
+      <p id="pMessage"></p>
+
       <div class="DivButtonsRegister">
-        <input type="button" id="btnsave" value="SALVAR E CONTINUAR" />
-        <a href="ui.html" class="Buttoncancel">
+        <button id="btnsave">SALVAR E CONTINUAR</button>
+        <a href="login.html" class="Buttoncancel">
         <input type="button" value="CANCELAR" class="ButtonCancel"/>
         </a>
       </div>
     </div>
+    <script src="atualizar.js"></script>
   </body>
 </html>

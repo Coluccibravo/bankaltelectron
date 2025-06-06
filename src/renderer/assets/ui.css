@@ -60,13 +60,16 @@ img{
 }
 
 #attinfo{
+    font-family: "Poppins";
     background-color: var(--bluelight);
     text-align: center;
     text-decoration: none;
     font-weight: 600;
     color: var(--gwhite);
     border-radius: 5px;
-    padding: 5px;
+    padding: 7px;
+    border: 0px;
+    cursor: pointer;
 }
 
 #logout{

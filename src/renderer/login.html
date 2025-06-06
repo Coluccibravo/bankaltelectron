@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/login.css"> 
   </head>
   <body>
-    <img src="./assets/Home.png" style="display: block;" id="imglogin">
+    <a href="index.html"><img src="./assets/Home.png" style="display: block;" id="imglogin"></a>
     <div id="BodyFirstPageLogin">
     <h1 class = "welcome">SEJA BEM VINDO!</h1>
     <h2 class="welcome1">Sistema de Desenvolvedor</h2>
@@ -19,15 +19,14 @@
       <img src="./assets/Person.png">
       <label for="Username">Username</label>
       </div>
-      <input type="text" placeholder="leomendes" class="LabelsLogin"/>
+      <input type="text" placeholder="leomendes" class="LabelsLogin" id="inputusername"/>
       <div class="Label1formlogin">
       <img src="./assets/Password.png" style="height: 30px; width: 30px;">
       <label for="Senha">Senha</label>
       </div>
-      <input type="password" placeholder="******" class="LabelsLogin" />
-      <a href="ui.html" style="margin: 0 auto">
+      <input type="password" placeholder="******" class="LabelsLogin" id="inputsenha" />
+      <p id="erradosenha"></p>
       <input type="button" value="ENTRAR" id="ButtonPageLoginEntrar"/>
-      </a>
       </form>
       <label for="naoCadastrado" class="Pconectlogin1">Não está cadastrado?</label>
       <a href="cadastro1.html"  id="AbuttonCadastrar">CADASTRAR</a>
@@ -36,6 +35,9 @@
       <a href="" class="Terms">Política de Privacidade</a>
     </p>
 
-    <script src="login.js"></script>
+
+    <script type="module" src="login.js"></script>
+    <script src="index.js"></script>
+
   </body>
 </html>

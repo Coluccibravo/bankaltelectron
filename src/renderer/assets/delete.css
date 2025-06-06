@@ -1,0 +1,59 @@
+@import './base.css';
+
+body {
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.titulo-delete {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--cancelred);
+    text-transform: uppercase;
+}
+
+.descricao-delete {
+    font-weight: bold;
+}
+
+#form {
+
+    & p {
+        margin-bottom: 5px;
+    }
+
+    & input {
+        font-family: "Poppins";
+        margin-top: 5px;
+        padding: 5px;
+    }
+}
+
+.box-botoes{
+    margin-top: 15px;
+    display: flex;
+    gap: 25px;
+}
+
+.botao-form {
+    margin-top: 15px;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: var(--gwhite);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ButtonConfirma {
+    background-color: var(--cancelred);
+}
+
+.ButtonCancel {
+    background-color: var(--purple);
+}
