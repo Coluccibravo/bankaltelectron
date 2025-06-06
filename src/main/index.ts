@@ -3,6 +3,8 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
+const axios = require('axios');
+
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -18,6 +20,7 @@ function createWindow(): void {
     },
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
+      webSecurity: false,
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
@@ -25,12 +28,17 @@ function createWindow(): void {
 
   mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
     callback({
-        responseHeaders: {
-            ...details.responseHeaders,
-            "Content-Security-Policy": ["default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;"]
-        }
+      responseHeaders: {
+        ...details.responseHeaders,
+        "Content-Security-Policy": [
+          "default-src 'self'; " +
+          "connect-src 'self' http://localhost:8080; " +
+          "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+          "font-src 'self' https://fonts.gstatic.com;"
+        ]
+      }
     });
-});
+  });
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
@@ -40,7 +48,7 @@ function createWindow(): void {
     shell.openExternal(details.url)
     return { action: 'deny' }
   })
-
+    
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
@@ -70,6 +78,16 @@ app.whenReady().then(() => {
 
   createWindow()
 
+  ipcMain.on('fetch-data', async (event, args) => {
+    try {
+      const response = await axios.get('https://catfact.ninja/fact');
+      event.reply('fetch-data-response', response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+ 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -88,3 +106,5 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+
+
