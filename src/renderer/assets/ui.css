@@ -1,0 +1,101 @@
+@import './base.css';
+
+body{
+    background-color: var(--gwhite);
+    font-family: "Poppins";
+}
+
+p{
+    font-weight: 700;
+}
+
+#imglogin{
+    height: 40px;
+    width: 40px;
+}
+
+#imglogin:hover{
+    cursor: pointer;
+}
+
+img{
+    margin-bottom: 0px;
+    max-width: 120px;
+    max-height: 120px;
+}
+
+#divimgperson{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 80vh;
+    flex-direction: column;
+}
+
+#textoimage{
+    display: flex;
+    gap: 150px;
+}
+
+#button{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#accsisdev{
+    background-color: var(--purple);
+    text-decoration: none;
+    color: var(--gwhite);
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#attinfo{
+    background-color: var(--bluelight);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--gwhite);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#logout{
+    background-color: var(--orange);
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--gwhite);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#textebutton{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+#btndeletaccout{
+    background-color: red;
+    border: red;
+    color: var(--gwhite);
+    font-weight: 600;
+    font-family: "Poppins";
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#btndeletaccout:hover{
+    cursor: pointer;
+}
