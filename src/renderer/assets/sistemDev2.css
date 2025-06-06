@@ -9,6 +9,15 @@ body{
     color: var(--bluelock);
     font-weight: 800;
     font-size: 50px;
+    margin-bottom: 0px;
+}
+
+#space{
+    margin-bottom: 50px;
+}
+
+#spacetop{
+    margin-top: 0px;
 }
 
 
@@ -27,7 +36,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .textinputsisdev{
-    font-weight: 600;
+    font-weight: 800;
 }
 
 #imglogin{
@@ -109,4 +118,16 @@ input:focus {
 
 .Buttoncancel:hover{
     background-color: darkred;
+}
+
+#btninfo{
+    text-decoration: none;
+    border: solid var(--purple);
+    background-color: var(--purple);
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 5px;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppins";
 }
