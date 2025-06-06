@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sistema de Desenvolvedor</title>
-    <meta
+    <!-- <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
-    />
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./assets/maiorIdade1.css" type="text/css" rel="stylesheet" />
-  </head>
   <body>
     <div>
+      <img src="./assets/Home.png" id="fotohome">
       <div id="primeirotitle">
       <h1>INFORAMÇÕES-PESSOAIS: Maior de Idade</h1>
       </div>
       <div id="todosform">
       <form id="form1">
-        <h2>DADOS PESSOAIS</h2>
+        <h2 class="h2l">DADOS PESSOAIS</h2>
         <label for="name">Nome Completo</label>
         <input type="text" placeholder="Leonardo Pedroso Mendes" />
         <label for="sex">Sexo</label>
@@ -40,7 +43,7 @@
       </form>
 
       <form id="form2">
-        <h2>ENDEREÇO</h2>
+        <h2 class="h2l">ENDEREÇO</h2>
         <label for="city">Cidade</label>
         <input type="text" placeholder="Nova Odessa">
         <label for="state">Estado</label>
@@ -58,14 +61,14 @@
       </form>
 
       <form id="form3">
-        <h2>CONTATO</h2>
+        <h2 class="h2l">CONTATO</h2>
         <label for="telephone">Telefone</label>
         <input type="text" placeholder="3872-2345">
         <label for="phone">Celular</label>
         <input type="text" placeholder="(19)99567-8924">
         <label for="email">Email</label>
         <input type="email" placeholder="leomendes@gmail.com">
-        <h2>RENDA</h2>
+        <h2 class="h2l">RENDA</h2>
         <label for="monthGain">Ganho Mensal Pessoal</label>
         <select name="monthGain" id="monthGain">
           <option value="Não trabalha">Não trabalha</option>
@@ -94,12 +97,12 @@
         </select>
       </form>
       </div>
-
-      <div>
-        <input type="button" value="MUDAR E SALVAR">
-        <a href="maiorIdade2.html">CONTINUAR</a>
-        <a href="sistemDev1.html">VOLTAR</a>
+      <div id="buttons">
+        <a href="maiorIdade2.html" id="continuar">CONTINUAR</a>
+        <a href="sistemDev2.html" id="voltar">VOLTAR</a>
       </div>
     </div>
+    <script src="maioridade1.js">
+    </script>
   </body>
 </html>
