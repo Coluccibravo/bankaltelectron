@@ -1,36 +1,42 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sistema de Desenvolvedor</title>
-    <link href="./assets/maiorIdade3.css" type="text/css" rel="stylesheet" />
-  </head>
-  <body>
-    <img src="./assets/Home.png" id="fotohome">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sistema de Desenvolvedor</title>
+  <link href="./assets/maiorIdade3.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <img src="./assets/Home.png" id="fotohome">
+  <div>
+    <h1>INFORMAÇÕES - CARTÕES</h1>
+    <form>
+      <h2>CARTÕES</h2>
+      <label for="selectCard">Cartão</label>
+      <select id="selectCartoes">
+        <option value="">Selecione um cartão</option>
+      </select>
+      <label for="plans">Planos</label>
+      <input type="text" id="plans" placeholder="Básica, Premium, Gold" disabled>
+      <label for="account">Conta</label>
+      <input type="text" id="account" placeholder="Corrente" disabled>
+      <label for="nome">Nome</Label>
+      <input type="text" placeholder="João da Silva" id="nome" disabled>
+      <label for="cardNumber">Número Cartão</label>
+      <input type="text" placeholder="6445 8567 6859 3894" id="cardNumber" disabled>
+      <label for="valid">Validade</label>
+      <input type="date" placeholder="07/07/2027" id="validity" disabled>
+      <label for="CVV">Código de segurança (CVV)</label>
+      <input type="text" placeholder="460" id="securityCode" disabled>
+    </form>
+
+
+
     <div>
-        <h1>INFORMAÇÕES - CARTÕES</h1>
-        <form>
-            <h2>CARTÕES</h2>
-            <label for="selectCard">Cartão</label>
-            <input type="text" id="selectCard" placeholder="Débito" disabled>
-            <label for="plans">Planos</label>
-            <input type="text" id="plans" placeholder="Básica, Premium, Gold" disabled>
-            <label for="account">Conta</label>
-            <input type="text" id="account" placeholder="Corrente" disabled>
-            <label for="cardNumber">Número Cartão</label>
-            <input type="text" placeholder="6445 8567 6859 3894" id="cardNumber" disabled>
-            <label for="valid">Validade</label>
-            <input type="date" placeholder="07/07/2027" id="validity" disabled>
-            <label for="CVV">Código de segurança (CVV)</label>
-            <input type="text" placeholder="460" id="securityCode" disabled>
-        </form>
-
-
-        
-        <div>
-           <button id="continuar">CONTINUAR</button>
-           <button id="voltar">VOLTAR</button>
-        </div>
+      <button id="continuar">CONTINUAR</button>
+      <button id="voltar">VOLTAR</button>
     </div>
-    <script src="maioridade3.js"></script>
-  </body>
+  </div>
+  <script src="maioridade3.js"></script>
+</body>

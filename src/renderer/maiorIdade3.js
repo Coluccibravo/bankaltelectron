@@ -40,15 +40,14 @@ window.addEventListener('DOMContentLoaded', () => {
                     return response.json();
                 })
                 .then((cartaoData) => {
-                    let tipo1 = "";
-                    let tipo2 = "";
-                    if (cartaoData.debito == 1) {
-                        tipo1 = "Débito";
+                    const select = document.getElementById("selectCartoes");
+                    cartaoData.forEach((cartao) => {
+                        const option = document.createElement("option");
+                        option.value = cartao.id; // ou cartao.numero, dependendo do que você precisa
+                        option.textContent = `${cartao.tipo} - **** ${cartao.numero.slice(-4)}`;
 
-                    }
-                    if (cartaoData.credito == 1) {
-                        tipo2 = "Crédito";
-                    }
+                        select.appendChild(option);
+                    });
                     let validade = cartaoData.datavalidade || '';
                     if (validade) {
                         const partes = validade.split('/');
@@ -56,20 +55,44 @@ window.addEventListener('DOMContentLoaded', () => {
                             validade = `${partes[2]}-${partes[1].padStart(2, '0')}-${partes[0].padStart(2, '0')}`;
                         }
                     }
-                    document.getElementById('selectCard').value = tipo1 + " " + "e" + " " + tipo2;
-                    document.getElementById('securityCode').value = cartaoData.cvv || '';
-                    document.getElementById('validity').value = validade;
-                    document.getElementById('cardNumber').value = cartaoData.numero || '';
-                });
-        })
-        .catch((error) => {
-            console.error('Erro ao buscar dados:', error);
-        });
-    document.getElementById('continuar').addEventListener('click', () => {
-        window.location.href = `maiorIdade4.html?cpf=${cpf}`;
-    });
-    document.getElementById('voltar').addEventListener('click', () => {
-        window.location.href = `maiorIdade2.html?cpf=${cpf}`;
-    });
-});
+                    document.getElementById("selectCartoes").addEventListener("change", function () {
+                        const cartaoSelecionado = cartaoData.find(c => c.id == this.value);
 
+                        if (cartaoSelecionado) {
+                            document.getElementById("cardNumber").value = cartaoSelecionado.numero;
+                            document.getElementById("nome").value = cartaoSelecionado.nome;
+                            document.getElementById("securityCode").value = cartaoSelecionado.cvv;
+
+                            // Converter validade de yyyy-mm-dd para dd/mm/yyyy
+                            // ...existing code...
+                            if (cartaoSelecionado.datavalidade) {
+                                const partes = cartaoSelecionado.datavalidade.split("/");
+                                if (partes.length === 3) {
+                                    const [dia, mes, ano] = partes;
+                                    validadeFormatada = `${ano}-${mes.padStart(2, '0')}-${dia.padStart(2, '0')}`;
+                                } else {
+                                    validadeFormatada = cartaoSelecionado.datavalidade; // fallback
+                                }
+                            }
+                            document.getElementById("validity").value = validadeFormatada;
+
+                        } else {
+                            // Limpar inputs se nenhum cartão estiver selecionado
+                            document.getElementById("cardNumber").value = "";
+                            document.getElementById("nome").value = "";
+                            document.getElementById("securityCode").value = "";
+                            document.getElementById("validity").value = "";
+                        }
+                    });
+                })
+                .catch((error) => {
+                    console.error('Erro ao buscar dados:', error);
+                });
+            document.getElementById('continuar').addEventListener('click', () => {
+                window.location.href = `maiorIdade4.html?cpf=${cpf}`;
+            });
+            document.getElementById('voltar').addEventListener('click', () => {
+                window.location.href = `maiorIdade2.html?cpf=${cpf}`;
+            });
+        });
+})
